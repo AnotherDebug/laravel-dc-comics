@@ -9,9 +9,14 @@
 
 
                 <form action="{{route('comics.store')}}" method="POST">
+                    @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo</label>
                         <input type="text" name="title" class="form-control" id="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="thumb" class="form-label">Immagine</label>
+                        <input type="text" name="thumb" class="form-control" id="thumb">
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
