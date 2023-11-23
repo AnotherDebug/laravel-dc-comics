@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="text-center">Add new Comic</h1>
 
-    <div class="container-fluid">
+    <div class="container-fluid my-5">
         <div class="row">
             <div class="col">
 
@@ -40,7 +40,6 @@
                       </div>
 
                     <button type="submit" class="btn btn-primary">Aggiungi</button>
-                    <button type="reset" class="btn btn-primary">Elimina</button>
                 </form>
 
 
