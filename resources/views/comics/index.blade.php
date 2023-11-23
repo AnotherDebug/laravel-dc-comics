@@ -27,3 +27,7 @@
         </tbody>
     </table>
 @endsection
+
+@section('title')
+    | List
+@endsection
