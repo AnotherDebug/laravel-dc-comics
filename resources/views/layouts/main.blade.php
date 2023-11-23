@@ -10,7 +10,9 @@
 </head>
 <body>
 
-    <main class="container">
+    @include('_header')
+
+    <main class="container mt-5">
         @yield('content')
     </main>
 
