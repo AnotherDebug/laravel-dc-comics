@@ -17,13 +17,21 @@
         <tbody>
             @foreach ($comics as $comic)
                 <tr>
-                    <th>{{$comic->id}}</th>
-                    <td>{{$comic->title}}</td>
-                    <td>{{$comic->price}}</td>
-                    <td>{{$comic->series}}</td>
-                    <td>{{$comic->sale_date}}</td>
-                    <td><a href="{{route('comics.show', $comic->id)}}"><button class="btn btn-info"><i class="fa-solid fa-book-open"></i></button></a></td>
-                    <td><a href="#"><button class="btn btn-warning"><i class="fa-solid fa-pencil"></i></button></a></td>
+                    <th>{{ $comic->id }}</th>
+                    <td>{{ $comic->title }}</td>
+                    <td>{{ $comic->price }}</td>
+                    <td>{{ $comic->series }}</td>
+                    <td>{{ $comic->sale_date }}</td>
+                    <td>
+                        <a href="{{ route('comics.show', $comic->id) }}">
+                            <button class="btn btn-info"><i class="fa-solid fa-book-open"></i>
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ route('comics.edit', $comic) }}"><button class="btn btn-warning"><i class="fa-solid fa-pencil"></i></button>
+                        </a>
+                    </td>
                 </tr>
             @endforeach
 
@@ -31,7 +39,6 @@
     </table>
 
     {{ $comics->links() }}
-
 @endsection
 
 @section('title')
