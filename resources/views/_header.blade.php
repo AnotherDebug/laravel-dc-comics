@@ -9,6 +9,6 @@
       <a class="nav-link" href="{{route('comics.create')}}">Add new Comic</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Contacts</a>
+      <a class="nav-link" href="{{route('comics.edit', $comic)}}">Edit Comic</a>
     </li>
   </ul>
