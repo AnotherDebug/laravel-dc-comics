@@ -3,6 +3,12 @@
 @section('content')
     <h1>Lista Fumetti</h1>
 
+    @if (session('deleted'))
+        <div class="alert alert-success" role="alert">
+            {{ session('deleted') }}
+        </div>
+    @endif
+
     <table class="table">
         <thead>
             <tr>
@@ -29,7 +35,8 @@
                         </a>
                     </td>
                     <td>
-                        <a href="{{ route('comics.edit', $comic) }}"><button class="btn btn-warning"><i class="fa-solid fa-pencil"></i></button>
+                        <a href="{{ route('comics.edit', $comic) }}"><button class="btn btn-warning"><i
+                                    class="fa-solid fa-pencil"></i></button>
                         </a>
                     </td>
                     <td>
