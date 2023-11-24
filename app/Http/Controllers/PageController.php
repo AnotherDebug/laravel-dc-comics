@@ -9,6 +9,8 @@ class PageController extends Controller
 {
    public function index(){
 
-    return view('home');
+    $comics = Comic::count();
+
+    return view('home', compact('comics'));
    }
 }
